@@ -1,0 +1,13 @@
+[Unit]
+Description=Hello World Node.js App
+After=network.target
+
+[Service]
+Type=simple
+User=casey
+WorkingDirectory=/home/casey/Desktop/HelloWorld
+ExecStart=/usr/bin/node helloWorld.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
