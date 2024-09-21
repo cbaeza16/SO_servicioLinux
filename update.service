@@ -1,12 +1,11 @@
 [Unit]
 Description=Update GitHub Deployment branch
 After=network.target
-
 [Service]
 Type=oneshot
-ExecStart=/home/casey/SO_servicioLinux/update.sh
+ExecStart=/bin/bash /home/casey/SO_servicioLinux/update.sh
+User=casey
 RemainAfterExit=true
-
 [Install]
 WantedBy=multi-user.target
 
